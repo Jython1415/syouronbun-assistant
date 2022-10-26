@@ -6,9 +6,8 @@ def main():
     # Split lines
     paragraphLines = []
     for p in paragraphs:
-        paragraphLines.append(formattedParagraph(getLines(p)))
-    
-    
+        paragraphLines.append(formattedParagraph(getLines(p, 21)))
+
     # Print output
     print("\n" * 3)
     for p in paragraphLines:
@@ -62,7 +61,7 @@ def splitEssay(essay):
    
 # Divides a paragraph into lines
 # The input paragraph should have no spaces
-def getLines(paragraph, lineLength = 20):
+def getLines(paragraph, lineLength = 21):
     paragraph = "　" + paragraph
     if len(paragraph) == 1:
         return []
